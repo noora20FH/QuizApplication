@@ -6,11 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-
-/**
- * Created by Azhar Rivaldi on 19/08/2018.
- */
-
 public class QuizResult extends Activity{
 
     @Override
@@ -18,14 +13,14 @@ public class QuizResult extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quiz_result);
 
-        TextView hasil = (TextView)findViewById(R.id.hasil);
-        TextView nilai = (TextView)findViewById(R.id.nilai);
+        TextView result = (TextView)findViewById(R.id.result);
+        TextView score = (TextView)findViewById(R.id.score);
 
-        hasil.setText("Jawaban Benar :"+MainActivity.benar+"\nJawaban Salah :"+MainActivity.salah);
-        nilai.setText(""+MainActivity.hasil);
+        result.setText("True Answer :"+MainActivity.answerTrue+"\nFalse Answer :"+MainActivity.answerFalse);
+        score.setText(""+MainActivity.result);
     }
 
-    public void ulangi(View view){
+    public void repeat(View view){
         finish();
         Intent a = new Intent(getApplicationContext(),MainActivity.class);
         startActivity(a);
