@@ -11,39 +11,39 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kuis Sederhana"
-        android:id="@+id/kuis"
+        android:text="Quiz"
+        android:id="@+id/quiz"
         android:textSize="20sp"
         android:textStyle="bold"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
-        android:id="@+id/pilihan"
+        android:id="@+id/option"
         android:layout_height="wrap_content">
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pilihan A"
-            android:id="@+id/pilihanA"/>
+            android:text="Option A"
+            android:id="@+id/optionA"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pilihan B"
-            android:id="@+id/pilihanB"/>
+            android:text="Option B"
+            android:id="@+id/optionB"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pilihan C"
-            android:id="@+id/pilihanC"/>
+            android:text="Option C"
+            android:id="@+id/optionC"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pilihan D"
-            android:id="@+id/pilihanD"/>
+            android:text="Option D"
+            android:id="@+id/optionD"/>
 
     </RadioGroup>
 
