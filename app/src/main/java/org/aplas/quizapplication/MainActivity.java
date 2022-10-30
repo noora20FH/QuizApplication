@@ -14,14 +14,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView kuis;
+    TextView quiz;
     RadioGroup rg;
-    RadioButton PilihanA, PilihanB, PilihanC, PilihanD;
-    int nomor = 0;
-    public static int hasil, benar, salah;
+    RadioButton optionA, optionB, optionC, optionD;
+    int number = 0;
+    public static int result, answerTrue, answerFalse;
 
     //pertanyaan
-    String[] pertanyaan_kuis = new String[]{
+    String[] question = new String[]{
             "1. Presiden Indonesia yang keenam adalah",
             "2. Lambang Negara Indonesia adalah",
             "3. Ibukota Indonesia adalah",
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     };
 
     //pilihan jawaban a, b, c, d
-    String[] pilihan_jawaban = new String[]{
+    String[] option = new String[]{
             "Soekarno", "Habibie", "Susilo Bambang Yudhoyono", "Joko Widodo",
             "Gajah Putih", "Garuda", "Macan", "Elang",
             "Jakarta", "Bogor", "Tangerang", "Bekasi",
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     };
 
     //jawaban benar
-    String[] jawaban_benar = new String[]{
+    String[] true_answer = new String[]{
             "Susilo Bambang Yudhoyono",
             "Garuda",
             "Jakarta",
@@ -52,48 +52,48 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        kuis = (TextView) findViewById(R.id.kuis);
-        rg = (RadioGroup) findViewById(R.id.pilihan);
-        PilihanA = (RadioButton) findViewById(R.id.pilihanA);
-        PilihanB = (RadioButton) findViewById(R.id.pilihanB);
-        PilihanC = (RadioButton) findViewById(R.id.pilihanC);
-        PilihanD = (RadioButton) findViewById(R.id.pilihanD);
+        quiz = (TextView) findViewById(R.id.quiz);
+        rg = (RadioGroup) findViewById(R.id.option);
+        optionA = (RadioButton) findViewById(R.id.optionA);
+        optionB = (RadioButton) findViewById(R.id.optionB);
+        optionC = (RadioButton) findViewById(R.id.optionC);
+        optionD = (RadioButton) findViewById(R.id.optionD);
 
-        kuis.setText(pertanyaan_kuis[nomor]);
-        PilihanA.setText(pilihan_jawaban[0]);
-        PilihanB.setText(pilihan_jawaban[1]);
-        PilihanC.setText(pilihan_jawaban[2]);
-        PilihanD.setText(pilihan_jawaban[3]);
+        quiz.setText(question[number]);
+        optionA.setText(option[0]);
+        optionB.setText(option[1]);
+        optionC.setText(option[2]);
+        optionD.setText(option[3]);
 
         rg.check(0);
-        benar = 0;
-        salah = 0;
+        answerTrue = 0;
+        answerFalse = 0;
     }
 
     public void next(View view) {
-        if (PilihanA.isChecked() || PilihanB.isChecked() || PilihanC.isChecked() || PilihanD.isChecked()) {
+        if (optionA.isChecked() || optionB.isChecked() || optionC.isChecked() || optionD.isChecked()) {
 
-            RadioButton jawaban_user = (RadioButton) findViewById(rg.getCheckedRadioButtonId());
-            String ambil_jawaban_user = jawaban_user.getText().toString();
+            RadioButton user_answer = (RadioButton) findViewById(rg.getCheckedRadioButtonId());
+            String get_user_answer = user_answer.getText().toString();
             rg.check(0);
-            if (ambil_jawaban_user.equalsIgnoreCase(jawaban_benar[nomor])) benar++;
-            else salah++;
-            nomor++;
-            if (nomor < pertanyaan_kuis.length) {
-                kuis.setText(pertanyaan_kuis[nomor]);
-                PilihanA.setText(pilihan_jawaban[(nomor * 4) + 0]);
-                PilihanB.setText(pilihan_jawaban[(nomor * 4) + 1]);
-                PilihanC.setText(pilihan_jawaban[(nomor * 4) + 2]);
-                PilihanD.setText(pilihan_jawaban[(nomor * 4) + 3]);
+            if (get_user_answer.equalsIgnoreCase(true_answer[number])) answerTrue++;
+            else answerFalse++;
+            number++;
+            if (number < question.length) {
+                quiz.setText(question[number]);
+                optionA.setText(option[(number * 4) + 0]);
+                optionB.setText(option[(number * 4) + 1]);
+                optionC.setText(option[(number * 4) + 2]);
+                optionD.setText(option[(number * 4) + 3]);
 
             } else {
-                hasil = benar * 20;
-                Intent selesai = new Intent(getApplicationContext(), QuizResult.class);
-                startActivity(selesai);
+                result = answerTrue * 20;
+                Intent finish = new Intent(getApplicationContext(), QuizResult.class);
+                startActivity(finish);
             }
         }
         else {
-            Toast.makeText(this,"Kamu Jawab Dulu",Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"You Need to Answer",Toast.LENGTH_LONG).show();
         }
     }
 }
