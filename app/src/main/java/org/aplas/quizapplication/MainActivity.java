@@ -22,29 +22,29 @@ public class MainActivity extends AppCompatActivity {
 
     //pertanyaan
     String[] question = new String[]{
-            "1. Presiden Indonesia yang keenam adalah",
-            "2. Lambang Negara Indonesia adalah",
-            "3. Ibukota Indonesia adalah",
-            "4. Lagu Kebangsaan Indonesia adalah",
-            "5. Bendera Negara Indonesia adalah"
+            "1. Technologies that accommodate the need for internet access via mobile devices are called",
+            "2. A mobile site designed so that when the site is opened via any mobile device, the site display will adjust to the width and height of the mobile device screen.",
+            "3. What programming language is often used to develop android applications?",
+            "4. Android applications can be distributed using, except?",
+            "5. What is the attraction of companies that choose android?"
     };
 
     //pilihan jawaban a, b, c, d
     String[] option = new String[]{
-            "Soekarno", "Habibie", "Susilo Bambang Yudhoyono", "Joko Widodo",
-            "Gajah Putih", "Garuda", "Macan", "Elang",
-            "Jakarta", "Bogor", "Tangerang", "Bekasi",
-            "Indonesia Raya", "Tanah Airku", "Indonesia Pusaka", "Indonesia Merdeka",
-            "Merah Biru Putih", "Merah Putih", "Putih Merah", "Belang-belang"
+            "Definition of mobile web", "Mobile marketing understanding", "Mobile site benefits", "Website understanding",
+            "Mobile site types", "Mobile marketing definition", "Mobile site definition", "Mobile site benefits",
+            "Java", "Go", "C++", "Kotlin",
+            "Web", "Emulator", "copy APK", "Store",
+            "high cost", "OS cannot be customized", "low cost and OS customization", "limited apps"
     };
 
     //jawaban benar
     String[] true_answer = new String[]{
-            "Susilo Bambang Yudhoyono",
-            "Garuda",
-            "Jakarta",
-            "Indonesia Raya",
-            "Merah Putih"
+            "Definition of mobile web",
+            "Mobile site types",
+            "Java",
+            "Emulator",
+            "low cost and OS customization"
     };
 
     @Override
