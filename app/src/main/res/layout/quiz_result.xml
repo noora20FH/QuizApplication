@@ -25,5 +25,14 @@
         android:layout_height="wrap_content"
         android:onClick="repeat"
         android:text="Repeat Test"/>
+    <Button
+        android:id="@+id/action_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Logout"
+        android:visible="true"
+        android:text="Logout Test"
+        android:backgroundTint="@android:color/holo_red_light"
+        app:showAsAction="never" />
 
 </LinearLayout>
