@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 if(txtUser.getText().toString().equalsIgnoreCase(username)&& txtPass.getText().toString().equalsIgnoreCase(password)){
-                    startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                    startActivity(new Intent(LoginActivity.this, StartActivity.class));
                 }else{
                     Toast.makeText(LoginActivity.this, "Username/Password", Toast.LENGTH_SHORT).show();
                 }
