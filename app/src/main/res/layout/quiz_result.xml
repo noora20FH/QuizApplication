@@ -31,6 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:title="Logout"
+        android:onClick="logout"
         android:visible="true"
         android:text="Logout Test"
         android:backgroundTint="@android:color/holo_red_light"
