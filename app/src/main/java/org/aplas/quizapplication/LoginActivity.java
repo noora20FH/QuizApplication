@@ -30,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
                 if(txtUser.getText().toString().equalsIgnoreCase(username)&& txtPass.getText().toString().equalsIgnoreCase(password)){
                     startActivity(new Intent(LoginActivity.this, StartActivity.class));
                 }else{
-                    Toast.makeText(LoginActivity.this, "Username/Password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Username or Password is Wrong", Toast.LENGTH_SHORT).show();
                 }
             }
         });
