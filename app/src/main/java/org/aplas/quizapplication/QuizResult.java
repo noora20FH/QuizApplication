@@ -25,4 +25,10 @@ public class QuizResult extends Activity{
         Intent a = new Intent(getApplicationContext(),MainActivity.class);
         startActivity(a);
     }
+    
+    public void logout(View view){
+        finish();
+        Intent a = new Intent(getApplicationContext(),LoginActivity.class);
+        startActivity(a);
+    }
 }
